@@ -41,6 +41,7 @@ class Receive
      * @param string $key The API key.
      * @param string $xpub The public key.
      * @param string $callback The callback URL.
+     * @param int $gap_limit The gap limit allowed.
      * @return \Blockchain\V2\Receive\ReceiveResponse
      * @throws \Blockchain\Exception\Error
      * @throws \Blockchain\Exception\HttpError
