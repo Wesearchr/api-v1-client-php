@@ -45,9 +45,9 @@ class Receive
      * @throws \Blockchain\Exception\Error
      * @throws \Blockchain\Exception\HttpError
      */
-    public function generate($key, $xpub, $callback)
+    public function generate($key, $xpub, $callback, $gap_limit = 20)
     {
-        $p = compact('key', 'xpub', 'callback');
+        $p = compact('key', 'xpub', 'callback', 'gap_limit');
         $q = http_build_query($p);
 
         curl_setopt($this->ch, CURLOPT_POST, false);
